@@ -19,29 +19,29 @@ function speak(text) {
 
 // Function to populate the list of voices
 function populateVoiceList() {
-    // voices = synth.getVoices().filter((voice) => voice.lang.startsWith('en-US'));
-    voices = synth
-        .getVoices()
-        .filter((voice) => {
-            console.log(voice);
-            return voice.name.startsWith('Samantha');
-        });
+    voices = synth.getVoices().filter((voice) => voice.lang.startsWith('en'));
     const voiceSelect = document.getElementById('voiceSelect');
     voiceSelect.innerHTML = ''; // Clear previous options
 
+    let defaultVoiceIndex = 0;
     voices.forEach((voice, index) => {
         const option = document.createElement('option');
         option.textContent = `${voice.name} (${voice.lang})`;
         option.value = index;
+        if (voice.default) {
+            defaultVoiceIndex = index;
+        }
         voiceSelect.appendChild(option);
     });
+
+    // Select the default voice
+    voiceSelect.selectedIndex = defaultVoiceIndex;
 
     // Trigger voice change event in case the voices were not loaded initially
     if (synth.onvoiceschanged !== undefined) {
         synth.onvoiceschanged = populateVoiceList;
     }
 }
-
 window.addEventListener('load', (e) => {
     // Add event listener to the button
     document.getElementById('speakTextButton').addEventListener('click', () => {
