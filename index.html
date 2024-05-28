@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>NW Product Pronunciation</title>
+        <link
+            rel="shortcut icon"
+            type="image/jpg"
+            href="./images/nw_logo.ico" 
+        />
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="largetext">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="">NW Product ProductPronunciation</h1>
+                </div>
+                <div class="col-md-4 text-right">
+                    <img id="titleImg" src="./images/nw_logo.avif" />
+                </div>
+            </div>
+
+            <hr />
+            <!-- Message -->
+            <div id="messageDiv" class="errorDiv"></div>
+
+            <div id="bulkDiv" class="container flex-column">
+                <!-- Header -->
+                <div class="row flex-row align-items-center card-body">
+                    
+                    <div class="col-md-1">
+                        <p class="heading">Text:</p>
+                    </div>
+                    <!-- TextArea -->
+                    <!-- <div class="row my-4"> -->
+                    <div class="col-md-11">
+                        <textarea
+                            id="textToVoiceArea"
+                            class="form-control custom-textarea"
+                            rows="1"
+                            cols="50"
+                        ></textarea>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="card">
+                    <!-- Voices -->
+                    <div class="row align-items-center card-body">
+                        <div class="col-md-2">
+                            <label for="voiceSelect" class="form-label"
+                                >Voice:</label
+                            >
+                        </div>
+                        <div class="col-md-4">
+                            <select
+                                id="voiceSelect"
+                                class="form-control"
+                            ></select>
+                        </div>
+                    </div>
+                    <!-- Rate -->
+                    <div class="row flex-row align-items-center card-body">
+                        <div class="col-md-12">
+                            <label for="rateRange">Rate:</label>
+                            <input
+                                type="range"
+                                id="rateRange"
+                                min="0.3"
+                                max="1"
+                                step="0.1"
+                                value=".8"
+                                class="form-range mx-4"
+                            />
+                            <span class="range" id="rateValue">1</span><br />
+                        </div>
+                    </div>
+                    <!-- Volume -->
+                    <div class="row flex-row align-items-center card-body">
+                        <div class="col-md-12">
+                            <label for="volumeRange">Volume:</label>
+                            <input
+                                type="range"
+                                id="volumeRange"
+                                min="0.3"
+                                max="1"
+                                step="0.1"
+                                value="1"
+                                class="form-range mx-4"
+                            />
+                            <span class="range" id="volumeValue">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-row my-4">
+                    <div class="col-md-12">
+                        <button
+                            id="speakTextButton"
+                            class="btn btn-primary btn-lg"
+                        >
+                            Speak Text
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

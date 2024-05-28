@@ -1,0 +1,122 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2em;
+}
+button {
+    font-family: Poppins, sans-serif;
+    padding: 12px;
+    font-size: 1.2em;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: 6px;
+    border-width: 1px;
+}
+.go {
+    background-color: darkseagreen;
+}
+.t1 {
+    font-size: 2em;
+}
+.t2 {
+    font-size: 1.5em;
+}
+.t3 {
+    font-size: 1.2em;
+}
+#singleDownloadButton {
+    padding: 12px;
+    font-size: 1.2em;
+    border-radius: 12px;
+}
+.flexDiv {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    padding-left: 24px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexColumn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    padding-left: 24px;
+    display: flex;
+    flex-grow: 1;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+.spaceVertical {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+hr {
+    width: 100%;
+}
+.text {
+    padding: 12px;
+}
+.error {
+    padding: 12px;
+    font: bold;
+    color: #ba3939;
+    background: #ffe0e0;
+    border: 1px solid #a33a3a;
+    margin-right: 12px;
+    border-radius: 9px;
+}
+.errorDiv {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+}
+#titleImg {
+    max-width: 100%;
+    height: auto;
+}
+.imageDiv {
+    width: 70px;
+    height: auto;
+}
+.hidden {
+    display: none;
+}
+textarea {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    resize: none;
+}
+span.range {
+    display: inline-block;
+    width: 30px;
+}
+.generated {
+    margin: 12px;
+} */
+body.largetext{
+  font-size: 2rem;
+}
+textarea.form-control{
+    resize: none;
+    font-size: 2.25rem;
+    background-color:beige;
+    padding-left: 2rem;
+}
+select.form-control{
+    font-size: 2rem;
+}
+button#speakTextButton{
+  font-size: 2rem;
+}
+.heading{
+  font-size: 2rem;
+}
