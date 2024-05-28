@@ -23,7 +23,7 @@ function populateVoiceList() {
     voices = synth
         .getVoices()
         .filter((voice) => {
-            console.log(voice);
+            // console.log(voice);
             return voice.name.startsWith('Samantha');
         });
     const voiceSelect = document.getElementById('voiceSelect');
