@@ -22,7 +22,10 @@ function populateVoiceList() {
     // voices = synth.getVoices().filter((voice) => voice.lang.startsWith('en-US'));
     voices = synth
         .getVoices()
-        .filter((voice) => voice.name.startsWith('Samantha'));
+        .filter((voice) => {
+            console.log(voice);
+            return voice.name.startsWith('Samantha');
+        });
     const voiceSelect = document.getElementById('voiceSelect');
     voiceSelect.innerHTML = ''; // Clear previous options
 
